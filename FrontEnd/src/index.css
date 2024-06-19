@@ -33,7 +33,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  f.food-home: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -74,3 +74,47 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+.main-home{
+  display: flex;  
+  
+}
+button{
+  font-family: "Quicksand", sans-serif !important;
+  cursor: pointer;
+}
+.food-home{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: overlay;
+
+}
+.oders-main{
+  width: 30%;
+}
+::-webkit-scrollbar{
+  transition: 0.4s !important;
+}
+.food-home::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+
+.food-home::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.food-home::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.food-home::-webkit-scrollbar-thumb:hover {
+  background: #00000066; 
+}

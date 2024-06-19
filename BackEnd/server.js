@@ -1,14 +1,22 @@
 const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./Config/db');
+const cors = require('cors');
+const path = require('path');
 
+const dotenv = require('dotenv');
+const connectDB = require('./Config/dbConnection');
+
+const AllFoodRoute = require('./Route/AllFoodRoute')
 dotenv.config();
 
 connectDB();
 
 const app = express();
-
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(express.json());
+
+
+app.use('/api/allFood',AllFoodRoute)
+
 
 app.get('/', (req, res) => {
    res.send('API is running...');
