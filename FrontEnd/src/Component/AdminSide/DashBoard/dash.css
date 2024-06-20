@@ -1,0 +1,156 @@
+.dash-minNav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 10px 0px;
+    margin-bottom: 20px;
+}
+.right-dash-con{
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+
+}
+.ad-log-btn{
+    color: #ffa500eb;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 4px 12px 4px 12px;
+    border-radius: 25px;
+    border: solid 1px transparent;
+    background: transparent;
+}
+
+.ad-sign-btn{
+    color: #ffa500eb;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 4px 12px 4px 12px;
+    border-radius: 25px;
+    border: solid 1px orange;
+    background: transparent;
+}
+.not-mess{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 30px;
+}
+.not-mess span{
+    margin-top: 3px;
+
+}
+.dash-icon{
+    opacity: 50%;
+}
+.resent-reviews img{
+    width: 50px;
+    height: 50px;object-fit: cover;
+}
+.resent-reviews{
+    width: 50%;
+    background: white;
+    border: solid 1px gray;
+    padding: 10px;
+    border-radius: 14px;
+}
+.resent-reviews .re-user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.re-user-con{
+    width: 100%;
+    padding: 18px;
+    border-bottom: solid 2px orange;
+}
+.food-img-nameStar{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 11px;
+    border-top: solid 1px #80808080;
+    padding-top: 5px;
+}
+.food-img-nameStar .star-icon{
+    font-size: 15px;
+  opacity: 70%;
+}
+.reviews-text p{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 77%;
+}
+.food-img-nameStar img{
+    border-radius: 11px;
+}
+.resent-reviews{
+    width: 30%;
+    background: white;
+    border: solid 1px transparent;
+    padding: 10px;
+    border-radius: 14px;
+    height: 35vh;
+    box-shadow: 0px 0px 5px 1px #8080802b;
+    overflow: scroll;
+    
+}
+
+.like-icon{
+    opacity: 60%;
+}
+.dashBoard-home-view{
+    display: flex;
+    gap: 45px;
+
+}
+.top-sell-foods img{
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.top-sell-foods{
+    box-shadow: 0px 0px 5px 1px #8080802b;
+    width: 65%;
+    background: white;
+    padding: 6px;
+    border-radius: 10px;
+}
+.star-rate{
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    opacity: 70%;
+    padding-inline: 7px;
+    justify-content: space-between;
+
+    }
+    .star-rate .star-icon{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.top-title{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    padding-inline: 7px;
+    opacity: 90%;
+    justify-content: space-between;
+}
+.top-con{
+width: fit-content;
+padding: 12px;
+}
+.top-con .rate-star{
+    display: flex;
+    align-items: center;
+}
+.top-food{
+    display: flex;
+    overflow: scroll;
+}

@@ -9,6 +9,7 @@ import axios from 'axios';
 
 function Foods() {
     const [foodData, setFoodData] = useState([]);
+    console.log(foodData);  
     const fetchAllFoods = async () => {
         try {
             const response = await axios.get(Foodgetall);
@@ -46,6 +47,7 @@ function Foods() {
                 </div>
             </div>
             <div className="food-item-con">
+                
                 {foodData.map((data) => (
                     <div key={data._id} className="food-item">
                         <div className="food-img">

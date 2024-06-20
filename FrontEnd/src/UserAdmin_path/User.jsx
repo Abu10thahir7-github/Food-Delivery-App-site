@@ -1,8 +1,7 @@
 import React from 'react'
 import Home from "../Component/UserSide/Home/Home"
-import Foods from "../Component/UserSide/Items/Foods"
 import Sidebar from "../Component/UserSide/Navbar/SideBar"
-
+import Foods from '../Component/UserSide/Items/Foods.jsx'
 import Oders from "../Component/UserSide/Orders/Oders"
 
 function User() {
@@ -14,7 +13,8 @@ function User() {
       <div className="food-home">
     
     <Home />
-    <Foods />
+    
+   <Foods />
       </div>
       <div className="oders-main">
     

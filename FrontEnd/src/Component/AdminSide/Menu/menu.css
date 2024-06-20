@@ -1,0 +1,28 @@
+.menu-nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.add-food-btn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 15px 7px 15px;
+    border: solid 3px orange;
+    border-radius: 12px;
+    color: orange;
+    background: transparent;
+    font-size: 16px !important;
+    font-weight: 700;
+}
+.add-food-btn:hover{
+    background: orange;
+    color: white;
+    box-shadow: Outset 0px 0px 14px 0px;
+}
+.menu-item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
