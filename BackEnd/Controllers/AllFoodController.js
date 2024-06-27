@@ -90,7 +90,7 @@ const getFoodById = async (req, res) => {
 const updateFood = async (req, res) => {
     try {
         const { id } = req.params;
-        const { FoodName, FoodDescription,FoodCategory, hotelName,time, price, } = req.body;
+        const { FoodName, FoodDescription,FoodCategory, hotelName,time, price ,imageUrl } = req.body;
         const existingFood = await AllFoodModel.findById(id);
 
         if (!existingFood) {
@@ -105,7 +105,7 @@ const updateFood = async (req, res) => {
 
         const updatedFood = await AllFoodModel.findByIdAndUpdate(
             id,
-            { FoodName, FoodDescription, hotelName, price, time,FoodCategory,  image },
+            { FoodName, FoodDescription, hotelName, price, time,FoodCategory,  image,imageUrl },
             { new: true }
         );
 

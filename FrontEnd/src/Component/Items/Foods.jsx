@@ -17,7 +17,7 @@ function Foods() {
     const [showPopup, setShowPopup] = useState(false);
     const [selectedFood, setSelectedFood] = useState(null);
     const user = JSON.parse(localStorage.getItem('currentUser'));
-    console.log(user);
+    console.log(user.userId);
     const navigate = useNavigate();
 
     const fetchAllFoods = async () => {
@@ -58,7 +58,18 @@ function Foods() {
         setSelectedFood(food);
         setShowPopup(true);
     };
-
+  
+  
+    const handleAddToCart = async (id) => {
+        try {
+            const response = await axios.post(`http://localhost:5000/api/user/addToCart`, {  foodId: id,userId:user.userId });
+            console.log(response.data);
+            alert('Food added to cart successfully');
+        } catch (error) {
+            console.log(error);
+    
+        }
+    };
 
     return (
         <div className='foods'>
@@ -109,7 +120,7 @@ function Foods() {
                             </div>
                         </div>
                         <div className="addCart-btn">
-                            <button onClick={() => handleAddToCart(data)}>Add</button>
+                            <button onClick={() => handleAddToCart(data._id)}>Add</button>
                             <FavoriteBorderOutlinedIcon className='heart-icon' />
                         </div>
                     </div>

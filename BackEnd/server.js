@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const UserSchema = require('./DB-Models/UserModel');
 const AllFoodRoute = require('./Route/AllFoodRoute');
-
+const  UserRoute = require('./Route/UserRoute');
 const app = express();
 
 const allowedOrigins = ['http://localhost:5174', 'http://localhost:5173'];
@@ -38,7 +38,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 app.use('/api/allFood', AllFoodRoute);
-
+app.use('/api/user', UserRoute);
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
