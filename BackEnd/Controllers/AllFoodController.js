@@ -1,7 +1,9 @@
 const AllFoodModel = require('../DB-Models/AllFoodModels');
+
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -39,9 +41,9 @@ const deleteImage = (imagePath) => {
 // Create (Add) a new food item
 const addAllFood = async (req, res) => {
     try {
-        const { FoodName, FoodDescription, hotelName, price, rating } = req.body;
+        const { FoodName, FoodDescription, hotelName, price, FoodCategory,time,imageUrl } = req.body;
         const image = req.file ? req.file.filename : null;
-        const FoodCreate = await AllFoodModel.create({ FoodName, FoodDescription, hotelName, price, rating, image });
+        const FoodCreate = await AllFoodModel.create({ FoodName, FoodDescription, hotelName, price,FoodCategory, time, image,imageUrl  });
         console.log("Added a new food", FoodCreate);
         res.status(201).send(FoodCreate);
     } catch (error) {
@@ -56,7 +58,7 @@ const getAllFood = async (req, res) => {
         const foods = await AllFoodModel.find();
         const foodWithImage = foods.map(food => {
             const imagePath = food.image ? `http://localhost:5000/images/${food.image}` : null;
-            console.log('Food:', imagePath);
+         
             return { ...food.toObject(), image: imagePath };
         });
         res.json(foodWithImage);
@@ -77,6 +79,7 @@ const getFoodById = async (req, res) => {
         }
         const imagePath = food.image ? `http://localhost:5000/images/${food.image}` : null;
         res.status(200).send({ ...food.toObject(), image: imagePath });
+        console.log({ ...food.toObject(), image: imagePath });
     } catch (error) {
         res.status(500).send('Error fetching food');
         console.error('Error fetching food:', error);
@@ -87,7 +90,7 @@ const getFoodById = async (req, res) => {
 const updateFood = async (req, res) => {
     try {
         const { id } = req.params;
-        const { FoodName, FoodDescription, hotelName, price, rating } = req.body;
+        const { FoodName, FoodDescription,FoodCategory, hotelName,time, price, } = req.body;
         const existingFood = await AllFoodModel.findById(id);
 
         if (!existingFood) {
@@ -102,11 +105,12 @@ const updateFood = async (req, res) => {
 
         const updatedFood = await AllFoodModel.findByIdAndUpdate(
             id,
-            { FoodName, FoodDescription, hotelName, price, rating, image },
+            { FoodName, FoodDescription, hotelName, price, time,FoodCategory,  image },
             { new: true }
         );
 
         res.status(200).send(updatedFood);
+        console.log(updateFood);
     } catch (error) {
         res.status(500).send('Error updating food');
         console.error('Error updating food:', error);
@@ -121,17 +125,16 @@ const deleteFood = async (req, res) => {
         if (!deletedFood) {
             return res.status(404).send('Food not found');
         }
+        res.status(200).send({ deletedFood, message: 'Food deleted successfully' });
 
-        if (deletedFood.image) {
-            deleteImage(`public/images/${deletedFood.image}`);
-        }
-
-        res.status(200).send('Food deleted successfully');
+        console.log('Food deleted successfully');
     } catch (error) {
         res.status(500).send('Error deleting food');
         console.error('Error deleting food:', error);
-    }
+    } 
 };
+
+
 
 module.exports = {
     upload,
@@ -139,5 +142,6 @@ module.exports = {
     getAllFood,
     getFoodById,
     updateFood,
-    deleteFood
+    deleteFood,
+   
 };

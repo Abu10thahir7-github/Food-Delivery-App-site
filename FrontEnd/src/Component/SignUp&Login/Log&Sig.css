@@ -1,0 +1,178 @@
+.sign,.login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    justify-content: center !important;
+    background-size: cover !important;
+    background-position: center !important;
+  
+}
+.login-btn,.sign-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login,.sign {
+    /* Your existing styles */
+    transition: opacity 1s ease-out;
+    background: url('./bg-1.jpg');
+   
+}
+.sign button {
+    /* Your existing styles */
+    padding: 5px 15px 5px 15px;
+    border: solid 2px #007cff;
+    color: #007cff;
+    border-radius: 5px;
+    font-weight: 600;
+    border-radius: 5px;
+    background: transparent;
+   
+}
+.login button:hover {
+    background: rgb(238, 130, 238);
+    color: white;
+}
+.sign button:hover {
+    background: #007cff;
+    color: white;
+}
+.login button {
+    /* Your existing styles */
+    padding: 5px 15px 5px 15px;
+    border: solid 2px rgba(238, 130, 238, 0.846);
+    color: rgb(238, 130, 238);
+    font-weight: 600;
+    border-radius: 5px;
+    background: transparent;
+   
+}
+
+.login.logged-in {
+    opacity: 0;
+}
+.sign h2{
+  color: white;
+  font-size: 25px;
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login h2{
+  color: white;
+  font-size: 25px;
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.content-log{
+  display: flex;
+  align-items: center;
+  background: #ffffff00;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  gap: 5px;
+  box-shadow: 0px 0px 52px -23px #000000;
+}
+.content-sign{
+    display: flex;
+    align-items: center;
+    
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0);
+    gap: 5px;
+    box-shadow: 0px 0px 52px -23px #000000;
+
+}
+.content-log .form{
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+.content-sign .sign-content{
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.content-log img{
+  width: 350px;
+  border-radius: 0px 20px 20px 0px;
+}
+.content-sign  img{
+  width: 350px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.sign {
+    /* Your existing styles */
+    transition: opacity 1s ease-out;
+  }
+  
+  .sign.registered {
+    opacity: 0;
+  }
+  .err{
+    color: red;
+    text-align: center;
+    border-bottom: solid 2px;
+  }
+  .content-sign  input{
+    padding: 5px 15px 5px 15px;
+    border-radius: 25px;
+    border: solid 1px white;
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+    background: transparent;
+    box-shadow: inset 0px 0px 11px 0px #ffffffad;
+
+  }
+  .content-log  input{
+    padding: 5px 15px 5px 15px;
+    border-radius: 25px;
+    border: solid 1px white;
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+    background: transparent;
+    box-shadow: inset 0px 0px 11px 0px #ffffffad;
+  }
+  .content-log input::placeholder{
+    color: white;
+
+    opacity: 79%;
+  }
+  
+  .content-sign input::placeholder{
+    color: white;
+
+    opacity: 79%;
+  }
+  
+  .sign a{
+    
+    color: #ffffffe6;
+
+  }
+  .login a{
+  
+    color: #ffffffe6;
+
+  }.sign form{
+    margin-bottom:2cqh ;
+  }
+  .login form{
+    margin-bottom:2cqh ;
+  }

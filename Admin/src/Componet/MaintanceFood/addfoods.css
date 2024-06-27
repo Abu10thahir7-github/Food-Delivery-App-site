@@ -1,0 +1,154 @@
+.addFoods img{
+  width: 350px ;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.addFoods{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.addFoods input{
+    padding: 8px;
+    border: solid 1px #ffa500cf;
+    background: #ffa5000f;
+
+    border-radius: 5px;
+    margin: 10px 5px 10px 5px;
+}
+.add-btn{
+    display: flex;
+    justify-content: center;
+}
+.add-btn button:hover{
+
+    background: #ffa600f1;
+}
+.add-btn button{
+    padding: 6px 10px 6px 10px;
+    border: solid 1px orange;
+    border-radius: 6px;
+    font-weight: 600;
+    background: #ffa5001f;
+
+}
+.image-input{
+    width: 98%;
+}
+.prew-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.food-de img{
+    width: 600px;
+    height: 375px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.food-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.food-de{
+    display: flex;
+   width: 100%;
+   margin-top: 20px;
+}
+
+.img-pre{
+    width: 360px;
+    height: 260px;
+    border: solid 1px gray;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    justify-content: center;
+}
+.addFoods select{
+    padding: 8px;
+    border: solid 1px orange;
+    background: #ffa5000f;
+    border-radius: 6px;
+    color: black;
+}
+.addFoods .row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.food-text-de{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 475px;
+
+}
+.food-btn button{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 50px 5px 50px !important;
+    font-size: 15px !important;
+    font-weight: 500;
+    background: transparent;
+   
+    border-radius: 4px;
+    
+}
+.image-add{
+    display: flex;
+}
+.food-btn{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.food-btn .edit{
+    color: #008000d6;
+    box-shadow: 0px 0px 7px 0px #0080002a;
+    
+    border: solid 1px  #0080008a;
+}
+.food-btn .delete{
+    border: solid 1px  #ff2e2e8a;
+    color: #ff0000e0;
+    box-shadow: 0px 0px 7px 0px #ff00002c;
+
+}
+.food-text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.food-text p{
+    font-weight: 400;
+}
+.food-text p span{
+    font-weight: 600;
+}
+
+.updateFood{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.updateFood form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addFoods-con{
+    display: flex;
+}

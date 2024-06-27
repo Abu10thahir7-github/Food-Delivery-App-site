@@ -1,0 +1,115 @@
+.menu-nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.add-food-btn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 15px 7px 15px;
+    border: solid 3px orange;
+    border-radius: 12px;
+    color: orange;
+    background: transparent;
+    font-size: 16px !important;
+    font-weight: 700;
+}
+.add-food-btn:hover{
+    background: orange;
+    color: white;
+    box-shadow: Outset 0px 0px 14px 0px;
+}
+.menu-item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.food-item img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 13px 13px 0px 0px;
+
+  }
+  .food-img{
+    position: relative;
+  }
+  .heart-icon{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    color: #585858;
+
+  }
+  .food-item:hover{
+    box-shadow: 0px 0px 10px 0px #0000008a;
+  }
+  .food-item{
+    width:23%;
+    border-radius: 13px;
+    box-shadow: 0px 0px 3px 0px #0000008a;
+    transition: ease-in-out 0.3s;
+  }
+  .food-time{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px !important;
+    
+}
+.food-time-icon{
+      font-size: 14px !important;
+    
+  }
+  .restaurant-name{
+    
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 70%;
+  }
+  .food-price{
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .foot-title{
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .food-cart-details{
+    padding: 2px 8px 10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .food-con{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+  }
+
+  .restaurant-name {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 50%;
+  }
+  .food-left{
+    width: 75%;
+  }

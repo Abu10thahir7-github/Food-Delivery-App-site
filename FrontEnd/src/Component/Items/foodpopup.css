@@ -1,0 +1,65 @@
+.food-details-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    height: 60%;
+   
+    border-radius: 8px;
+    position: relative;
+}
+
+.popup-content img {
+
+    width: 345px;
+    border-radius: 8px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.popup-content h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.popup-content p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+.pop-detail{
+    display: flex;
+    width: 100%;
+}
+.popup-details, .popup-food-con{
+    width: 50%;
+}
+.close-icon{
+    position: absolute;
+    right: 7px;
+    top: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.close-icon:hover{
+    background-color: rgba(0, 0, 255, 0.345);
+    border-radius: 5px;
+}
+.pop-des{
+    height: 23vh;
+    overflow: scroll;
+}

@@ -7,8 +7,11 @@ const AllFoodModel = new Schema({
     hotelName:String,
     image:String,
     price:Number,
-    rating:Number
+    time:Number,
+    FoodCategory:String,
+    imageUrl: { type: String }
+    
 })
 const FoodModel = mongoose.model('AllFoodModel',AllFoodModel)
 
-module.exports = FoodModel;
+module.exports = FoodModel; 
